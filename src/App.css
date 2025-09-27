@@ -317,7 +317,7 @@ input {
 .modal-center {
   display: grid;
   grid-template-columns: 30% 65%;
-  grid-template-rows: 33% 33% 33%;
+  grid-template-rows: auto;
   gap: 10px 20px;
   font-size: 48pt;
 }
