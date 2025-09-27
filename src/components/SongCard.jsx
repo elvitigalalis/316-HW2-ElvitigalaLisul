@@ -91,17 +91,17 @@ export default class SongCard extends React.Component {
         <div className="button-group">
           <input
             type="button"
-            id={"delete-song-" + num}
-            className="song-card-button"
-            onClick={this.handleRemoveClick}
-            value="🗑"
-          />
-          <input
-            type="button"
             id={"duplicate-song-" + num}
             className="song-card-button"
             onClick={this.handleDuplicateClick}
             value="⎘"
+          />
+          <input
+            type="button"
+            id={"delete-song-" + num}
+            className="song-card-button"
+            onClick={this.handleRemoveClick}
+            value="🗑"
           />
         </div>
       </div>

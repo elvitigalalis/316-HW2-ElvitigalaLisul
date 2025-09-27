@@ -297,6 +297,12 @@ input {
   padding: 6px 12px;
 }
 
+.toolbar-button[disabled] {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: default;
+}
+
 .modal-root > * {
   padding: 1rem;
 }
