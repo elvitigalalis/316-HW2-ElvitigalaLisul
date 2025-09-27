@@ -256,8 +256,6 @@ class App extends React.Component {
         this.tps.processTransaction(transaction);
     }
 
-    // === NEW: song edit/remove/add/duplicate helpers & transactions ===
-
     // open edit modal
     handleEditSongCallback = (song, index) => {
         this.setState({
@@ -352,7 +350,7 @@ class App extends React.Component {
     duplicateList = (key) => {
         let newKey = this.state.sessionData.nextKey;
         let original = this.db.queryGetList(key);
-        let newName = original.name + "(Copy)";
+        let newName = original.name + " (Copy)";
         let newList = {
             key: newKey,
             name: newName,

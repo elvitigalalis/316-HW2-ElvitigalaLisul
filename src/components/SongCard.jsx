@@ -74,7 +74,8 @@ export default class SongCard extends React.Component {
         onDragEnd={this.handleDragEnd}
         draggable="true"
       >
-        <span>{num + "."}</span>{" "}
+        <span>{num + "."}</span>
+        {"\u00A0"}
         <a
           href={`https://www.youtube.com/watch?v=${song.youTubeId}`}
           className="song-card-title"
@@ -82,8 +83,10 @@ export default class SongCard extends React.Component {
           rel="noreferrer"
         >
           {song.title}
-        </a>{" "}
-        <span className="song-card-year">({song.year})</span> <span>by</span>{" "}
+        </a>
+        {"\u00A0"}
+        <span className="song-card-year">({song.year})</span><span className="song-card-by">{"\u00A0by"}</span>
+        {"\u00A0"}
         <span className="song-card-artist">{song.artist}</span>
         <div className="button-group">
           <input

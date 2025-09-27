@@ -91,6 +91,7 @@ body {
   flex-direction: column;
   overflow: scroll;
   background-color: var(--swatch-accent);
+  overflow-y: auto;
 }
 
 #statusbar {
@@ -195,6 +196,10 @@ body {
 
 .song-card-year {
   color: black;
+}
+
+.song-card-by {
+  font-weight: normal;
 }
 
 .song-card-artist {
