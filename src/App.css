@@ -19,7 +19,7 @@ body {
 
 #root {
   background-color: var(--swatch-primary);
-  font-family: serif;
+  font-family: "Alan Sans", sans-serif;
   position: absolute;
   width: 80%;
   left: 10%;
@@ -47,7 +47,7 @@ body {
   background-image: linear-gradient(to bottom,         
   #b8b808, #636723);
   color: white;
-  font-size: 54pt;
+  font-size: 40pt;
   border-color: black;
   border-width: 2px;
   border-style: solid;
@@ -58,7 +58,7 @@ body {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   text-align:center;
-  font-size: 36pt;
+  font-size: 24pt;
   font-weight: bold;
   display:flex;
   flex-direction: row;
@@ -115,6 +115,10 @@ body {
   border-radius: 25px;
 }
 
+.playlist-card-text {
+  font-size: 17px;
+}
+
 .unselected-playlist-card:hover {
   cursor: pointer;
   background-color: var(--swatch-contrast);
@@ -151,7 +155,7 @@ body {
 .song-card, .song-card-dragged-to { 
   display:flex;
   align-items: center;
-  font-size: 24pt;
+  font-size: 14pt;
   height:20%;
 }
 
