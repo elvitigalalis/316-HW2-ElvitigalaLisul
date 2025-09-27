@@ -28,6 +28,10 @@ export default class PlaylistCard extends React.Component {
         event.stopPropagation();
         this.props.deleteListCallback(this.props.keyNamePair);
     }
+    handleDuplicateList = (event) => {
+        event.stopPropagation();
+        this.props.duplicateListCallback(this.props.keyNamePair.key);
+    }
     handleToggleEdit = (event) => {
         this.setState({
             editActive: !this.state.editActive
@@ -62,14 +66,15 @@ export default class PlaylistCard extends React.Component {
                     onBlur={this.handleBlur}
                     onChange={this.handleUpdate}
                     defaultValue={keyNamePair.name}
-                />)
+                />
+            )
         }
         else {
-
             let selectClass = "unselected-playlist-card";
             if (selected) {
                 selectClass = "selected-playlist-card";
             }
+
             return (
                 <div
                     id={keyNamePair.key}
@@ -82,12 +87,22 @@ export default class PlaylistCard extends React.Component {
                         className="playlist-card-text">
                         {keyNamePair.name}
                     </span>
-                    <input
-                        type="button"
-                        id={"delete-list-" + keyNamePair.key}
-                        className="card-button"
-                        onClick={this.handleDeleteList}
-                        value={"\u2715"} />
+                    <div className="card-buttons">
+                        <input
+                            type="button"
+                            id={"delete-list-" + keyNamePair.key}
+                            className="card-button"
+                            onClick={this.handleDeleteList}
+                            value={"🗑"} 
+                        />
+                        <input
+                            type="button"
+                            id={"duplicate-list-" + keyNamePair.key}
+                            className="card-button"
+                            onClick={this.handleDuplicateList}
+                            value="⎘" 
+                        />
+                    </div>
                 </div>
             );
         }
