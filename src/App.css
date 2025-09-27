@@ -4,11 +4,11 @@
         COLORS THAT WE'LL USE TOGETHER IN MULTIPLE PLACES THAT
         TOGETHER WILL MAKE UP A GIVEN THEME
     */
-  --swatch-foundation: #eeeedd; 
-  --swatch-primary: #e6e6e6; 
+  --swatch-foundation: #eeeedd;
+  --swatch-primary: #e6e6e6;
   --swatch-complement: #e1e4cb;
-  --swatch-contrast: #111111; 
-  --swatch-accent: #669966; 
+  --swatch-contrast: #111111;
+  --swatch-accent: #669966;
   --swatch-status: #123456;
   --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
 }
@@ -23,9 +23,9 @@ body {
   position: absolute;
   width: 80%;
   left: 10%;
-  height:90%;
+  height: 90%;
   top: 5%;
-  display:grid;
+  display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: 10% 10% 70% 10%;
 }
@@ -40,12 +40,11 @@ body {
   -statusbar
  */
 
- #banner {
+#banner {
   grid-column: 1 / 3;
   grid-row: 1 / 2;
-  text-align:center;
-  background-image: linear-gradient(to bottom,         
-  #b8b808, #636723);
+  text-align: center;
+  background-image: linear-gradient(to bottom, #b8b808, #636723);
   color: white;
   font-size: 40pt;
   border-color: black;
@@ -57,10 +56,10 @@ body {
 #sidebar-heading {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  text-align:center;
+  text-align: center;
   font-size: 24pt;
   font-weight: bold;
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -97,7 +96,7 @@ body {
 #statusbar {
   grid-column: 1 / 3;
   grid-row: 4 / 5;
-  background-color: #FFA07A;
+  background-color: #ffa07a;
   color: black;
   text-align: center;
   font-size: 38pt;
@@ -105,10 +104,12 @@ body {
 }
 
 #add-playlist-button {
-  float:left;
+  float: left;
 }
 
-.playlist-card, .selected-playlist-card, .unselected-playlist-card {
+.playlist-card,
+.selected-playlist-card,
+.unselected-playlist-card {
   font-size: 18pt;
   margin: 10px;
   padding: 20px;
@@ -122,7 +123,7 @@ body {
 .unselected-playlist-card:hover {
   cursor: pointer;
   background-color: var(--swatch-contrast);
-  color:white;
+  color: white;
 }
 
 .selected-playlist-card {
@@ -134,35 +135,89 @@ body {
   background-color: var(--swatch-complement);
 }
 
-.card-button, .card-button-disabled {
-  font-size:18pt;
+.card-button,
+.card-button-disabled {
+  font-size: 18pt;
   border-width: 0px;
-  float:right;
+  float: right;
   color: black;
   cursor: pointer;
 }
 
 .card-button:hover {
   cursor: pointer;
-  color:black;
+  color: black;
 }
 
 .card-button-disabled {
-  opacity: 0.25; 
+  opacity: 0.25;
   cursor: not-allowed;
 }
 
-.song-card, .song-card-dragged-to { 
-  display:flex;
+.song-card,
+.song-card-dragged-to {
+  display: flex;
   align-items: center;
   font-size: 14pt;
-  height:20%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 125px;
+  background-color: var(--swatch-complement);
+}
+
+.song-card:hover {
+  background-color: var(--swatch-contrast);
+  color: white;
+  cursor: pointer;
+}
+
+.is-dragging {
+  border: 2px solid black;
+  opacity: 0.5;
+}
+
+.song-card .song-card-title {
+  color: var(--swatch-link-emphasis);
+  text-decoration: none;
+}
+
+.song-card:hover .song-card-title {
+  color: var(--swatch-link-contrast);
+}
+
+.song-card:hover .song-card-title:hover {
+  color: var(--swatch-link-hover);
+}
+
+.song-card-title:active {
+  color: var(--swatch-link-active);
+}
+
+.song-card-year {
+  color: black;
+}
+
+.song-card-artist {
+  color: red;
+}
+
+.song-card-button {
+  float: right;
+  font-size: 24pt;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.song-card .button-group {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
 }
 
 input {
-  font-size:20pt;
+  font-size: 20pt;
 }
-
 
 /* THIS STYLE SHEET MANAGES STYLE FOR OUR MODAL, i.e. DIALOG BOX */
 
@@ -208,10 +263,10 @@ input {
 }
 
 .modal-north {
-  font-size:32pt;
+  font-size: 32pt;
   font-weight: bold;
   background-color: #669966;
-  color:white;
+  color: white;
 }
 
 .modal-center {
@@ -228,7 +283,7 @@ span {
 }
 
 .modal-south {
-  display:flex;
+  display: flex;
   flex-direction: row;
   background-color: lightgray;
   align-items: center;
@@ -240,13 +295,13 @@ span {
   grid-row: 1 / 4;
 }
 
-.modal-prompt {  
-  font-size:28pt;
+.modal-prompt {
+  font-size: 28pt;
   font-weight: bold;
 }
 
 .modal-textfield {
-  font-size:28pt;
+  font-size: 28pt;
 }
 
 .modal-button {
@@ -259,7 +314,7 @@ span {
 }
 
 .modal-button {
-  margin:5px;
+  margin: 5px;
 }
 
 .modal p + p {
